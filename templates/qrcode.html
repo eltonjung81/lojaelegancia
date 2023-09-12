@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Pagamento com Pix</title>
+    <!-- Inclua os estilos ou links de estilo relevantes, se necessário -->
+    <style>
+        body {
+            background-color: #F34336;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            margin-top: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1, p {
+            color: aliceblue;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        #copiarBotao {
+            margin-top: 20px;
+        }
+
+        img {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Use o mesmo cabeçalho da página original -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='imagens/logotipo elegancia.png') }}" width="100px" alt="Imagem 1">
+            </div>
+            <div class="contact">
+                <a href="https://api.whatsapp.com/send?phone=51999906748" target="_blank">
+                    <img src="{{ url_for('static', filename='imagens/whatsapp-logo-vector-11573849504ftryug0qkh.png') }}" width="80px" alt="Imagem 1">
+                </a>
+            </div>
+        </div>
+    </header>
+    <a href="https://api.whatsapp.com/send?phone=51999906748" target="_blank">
+        <img src="{{ url_for('static', filename='imagens/whatsapp-logo-vector-11573849504ftryug0qkh.png') }}" width="80px" alt="Imagem 1">
+    </a>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='imagens/logotipo elegancia.png') }}" width="100px" alt="Imagem 1">
+    </div>
+    <p>Assim que você pagar o pix, você pode clicar no ícone de WhatsApp bem no topo e nos enviar o comprovante para o processo de expedição ser mais eficiente</p>
+    <button id="copiarBotao">Copiar Código QR</button>
+    <textarea id="codigoQR" style="display: none;"></textarea>
+    <img src="{{ url_for('static', filename='imagens/qrCODE.jpg') }}" width="300px" alt="QR CODE">
+
+    <!-- Adicione qualquer outro conteúdo necessário aqui -->
+
+    <a href="/">Voltar para a página inicial</a>
+    <script>
+        // Obtém o código QR (substitua pelo código real)
+        var codigoQRTexto = "00020126360014br.gov.bcb.pix0114+5551999906748520400005303986540571.905802BR5910Elton Jung6008Brasilia62180514cinta redutora6304EB43";
+    
+        // Define o conteúdo do <textarea> com o código QR
+        var codigoQRTextarea = document.getElementById('codigoQR');
+        codigoQRTextarea.value = codigoQRTexto;
+    
+        // Adiciona um ouvinte de evento para o botão de cópia
+        var copiarBotao = document.getElementById('copiarBotao');
+        copiarBotao.addEventListener('click', function () {
+            codigoQRTextarea.select(); // Seleciona todo o texto no <textarea>
+            document.execCommand('copy'); // Copia o texto para a área de transferência
+            alert('Código QR copiado para a área de transferência!');
+        });
+    </script>
+</body>
+</html>

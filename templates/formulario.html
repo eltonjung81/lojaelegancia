@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Pagamento com Pix</title>
+    <!-- Inclua os estilos ou links de estilo relevantes, se necessário -->
+</head>
+<body style="background-color: #F34336;">
+    <!-- Use o mesmo cabeçalho da página original -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='imagens/logotipo elegancia.png') }}" width="100px" alt="Imagem 1">
+            </div>
+            <div class="contact">
+                <a href="https://api.whatsapp.com/send?phone=51999906748" target="_blank">
+                    <img src="{{ url_for('static', filename='imagens/whatsapp-logo-vector-11573849504ftryug0qkh.png') }}" width="80px" alt="Imagem 1">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+            
+        <form class="alinhar">
+            <h3 style="text-align: right;">Informações de Entrega</h3>
+            <label for="nome" style="color: aliceblue; text-align: right;">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br>
+        
+            <label for="celular" style="color: aliceblue; text-align: right;">Celular:</label><br>
+            <input type="text" id="celular" name="celular" required><br>
+        
+            <label for="cep" style="color: aliceblue; text-align: right;">CEP:</label><br>
+            <input type="text" id="cep" name="cep" required><br>
+        
+            <label for="cidade" style="color: aliceblue; text-align: right;">Cidade:</label><br>
+            <input type="text" id="cidade" name="cidade" required><br>
+        
+            <label for="bairro" style="color: aliceblue; text-align: right;">Bairro:</label><br>
+            <input type="text" id="bairro" name="bairro" required><br>
+        
+            <label for="rua" style="color: aliceblue; text-align: right;">Rua:</label><br>
+            <input type="text" id="rua" name="rua" required><br>
+        
+            <label for="numero" style="color: aliceblue; text-align: right;">Número:</label><br>
+            <input type="text" id="numero" name="numero" required><br>
+        
+            <h3 style="font-size: 20px; text-align: center;"> Tamanho do Produto:</h3><br>
+            <label for="tamanho" style="text-align: right;"></label>
+            <select name="tamanho" id="tamanho" style="text-align: right;">
+                <option value="P">selecione o tamanho</option>
+                <option value="P">P (TAMANHO S)</option>
+                <option value="M">M (TAMANHO M)</option>
+                <option value="G">G (TAMANHO L)</option>
+                <option value="GG">GG (TAMANHO XL)</option>
+                <option value="3XG">3XG (TAMANHO 3XL)</option>
+            </select>
+        </form>
+        
+                <!-- Adicione outras opções de tamanho, se necessário -->
+            </select>
+            
+            <button id="pixButton2" type="button" onclick="enviarFormulario()">Pagar com Pix</button><br>
+            <p>Clique para ver o QR code</p>
+        </form>
+           
+    </div>
+
+    <!-- Inclua quaisquer scripts JavaScript necessários, se houver -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+    
+        function enviarFormulario() {
+    // Coleta os valores dos campos do formulário
+            var nome = document.getElementById('nome').value;
+            var celular = document.getElementById('celular').value;
+            var cep = document.getElementById('cep').value;
+            var cidade = document.getElementById('cidade').value;
+            var bairro = document.getElementById('bairro').value;
+            var rua = document.getElementById('rua').value;
+            var numero = document.getElementById('numero').value;
+            var tamanho = document.getElementById('tamanho').value;
+
+            // Cria um objeto com os dados do formulário
+            var dadosFormulario = {
+                nome: nome,
+                celular: celular,
+                cep: cep,
+                cidade: cidade,
+                bairro: bairro,
+                rua: rua,
+                numero: numero,
+                tamanho: tamanho
+            };
+
+            // Envia os dados para o servidor usando uma requisição AJAX
+            // Substitua a URL abaixo pela URL real do seu servidor onde você deseja enviar os dados.
+            var urlDoServidor = 'http://localhost:5000/enviar-formulario';  // Exemplo de URL do servidor
+
+            // Configuração da requisição AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', urlDoServidor, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            // Converte os dados do formulário para JSON e envia a requisição
+            xhr.send(JSON.stringify(dadosFormulario));
+
+            // Trata a resposta do servidor (opcional)
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    window.location.href = '/qrcode'; // Redireciona para a rota /qrcode
+                    alert('Dados enviados com sucesso!');
+                    // Redirecione para a página de QR code
+                    
+                } else {
+                    alert('Erro ao enviar os dados.');
+                }
+            };
+        }
+    </script>
+            
+
+
+
+
+
+
+
+
+    </script> 
+    
+    
+</body>
+</html>

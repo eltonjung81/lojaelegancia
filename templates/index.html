@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você cada vez mais linda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='imagens/logotipo elegancia.png') }}" alt="Imagem 1">
+
+            </div>
+            <div class="contact">
+                <a href="https://api.whatsapp.com/send?phone=51999906748" target="_blank">
+                    <img src="{{ url_for('static', filename='imagens/whatsapp-logo-vector-11573849504ftryug0qkh.png') }}" alt="Imagem 1">
+                </a>
+            </div>
+        </div>
+    </header>
+     <!-- carrossel  ok -->
+     <section class="product-carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides do carrossel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='imagens/foto1.jpg') }}" alt="Balanço de Equilíbrio">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='imagens/foto2.jpg') }}" alt="Balanço de Equilíbrio">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='imagens/foto3.jpg') }}" alt="Balanço de Equilíbrio">
+                </div>
+            </div>
+
+            <!-- Controles do carrossel -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+    
+
+    <section class="product-prcie">
+        <div class="main-product-info">
+            <h1 class="main-product-name theme-title">Cinta THIN WAIST</h1>
+            <div class="product-reviewer" data-pl="product-reviewer">
+                <!-- Sua avaliação e avaliações de clientes aqui -->
+            </div>
+            <span class="product-reviewer-sold" data-spm-anchor-id="a2g0o.detail.0.i6.241a132aHTO8mz">2,000+ Vendidos</span>
+        </div>
+        <div class="main-product-prices">
+            <div class="old-price">R$ 89,90</div>
+            <div class="flex">
+                <div class="actual-price price">R$ 79,90</div>
+                <div class="discount-tag -main-product">
+                    
+                    <ul class="inline"><li><img alt="amex" width="35" height="24" src="https://icons.yampi.me/svg/card-amex.svg" data-src="https://icons.yampi.me/svg/card-amex.svg" class="loaded"></li> <li><img alt="visa" width="35" height="24" src="https://icons.yampi.me/svg/card-visa.svg" data-src="https://icons.yampi.me/svg/card-visa.svg" class="loaded"></li> <li><img alt="diners" width="35" height="24" src="https://icons.yampi.me/svg/card-diners.svg" data-src="https://icons.yampi.me/svg/card-diners.svg" class="loaded"></li> <li><img alt="mastercard" width="35" height="24" src="https://icons.yampi.me/svg/card-mastercard.svg" data-src="https://icons.yampi.me/svg/card-mastercard.svg" class="loaded"></li> <li><img alt="discover" width="35" height="24" src="https://icons.yampi.me/svg/card-discover.svg" data-src="https://icons.yampi.me/svg/card-discover.svg" class="loaded"></li> <li><img alt="aura" width="35" height="24" src="https://icons.yampi.me/svg/card-aura.svg" data-src="https://icons.yampi.me/svg/card-aura.svg" class="loaded"></li> <li><img alt="hipercard" width="35" height="24" src="https://icons.yampi.me/svg/card-hipercard.svg" data-src="https://icons.yampi.me/svg/card-hipercard.svg" class="loaded"></li> <li><img alt="elo" width="35" height="24" src="https://icons.yampi.me/svg/card-elo.svg" data-src="https://icons.yampi.me/svg/card-elo.svg" class="loaded"></li> <li><img alt="billet" width="35" height="24" src="https://icons.yampi.me/svg/card-billet.svg" data-src="https://icons.yampi.me/svg/card-billet.svg" class="loaded"></li> <li><img alt="hiper" width="35" height="24" src="https://icons.yampi.me/svg/card-hiper.svg" data-src="https://icons.yampi.me/svg/card-hiper.svg" class="loaded"></li> <li><img alt="pix" width="35" height="24" src="https://icons.yampi.me/svg/card-pix.svg" data-src="https://icons.yampi.me/svg/card-pix.svg" class="loaded"></li></ul>
+                    
+                    <p class="ql-align-center"><br></p>
+                    <button class="buy-button" id="openModalBtn">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-details">
+        <div class="-holder">
+            <div class="theme-title">Descrição do produto</div>
+            <div class="-content editor-theme">
+                <h1 class="ql-align-center" style="color: rgb(230, 0, 0);">Frete Grátis</h1>
+                <h1 class="ql-align-center" style="color: rgb(255, 255, 255); background-color: rgb(230, 0, 0);">
+                    <u>No momento da sua compra entraremos em contato</u>
+                </h1>
+                <h1 class="ql-align-center" style="color: rgb(255, 255, 255); background-color: rgb(230, 0, 0);">
+                    <u>para tirarmos suas dúvidas, e para a escolha do tamanho que caia perfeitamente em seu corpo.</u>
+                </h1>
+                <h1 class="ql-align-center" style="color: rgb(255, 255, 255); background-color: rgb(230, 0, 0);">
+                    <u>Temos uma equipe de colaboradores que com poucas perguntas lhe dirão o melhor tamanho para seu corpo e objetivo.</u>
+                </h1>
+                <img src="{{ url_for('static', filename='imagens/foto meio.jpg') }}" width="300" alt="Balanço de Equilíbrio">
+                <p class="ql-align-center"><br></p>
+                <p class="ql-align-center">Descrição do produto</p>
+                <h2 class="ql-align-center" style="color: rgb(230, 0, 0);">
+                    Antes de comprar, role até o final e veja os comentários de nossos clientes sobre o produto
+                </h2>
+                <p class="ql-align-center"><br></p>
+                <img src="{{ url_for('static', filename='imagens/foto2.jpg') }}" width="300" alt="Balanço de Equilíbrio">
+                <h3 class="ql-align-center" style="color: rgba(0, 0, 0, 0.8);">Dimensões:</h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">P - (TAMANHO S)</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 61cm</span></h3>
+                <p class="ql-align-center"><br></p>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">M - (TAMANHO M)</span>
+                </h3>
+                
+                </h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span>
+                </h3>
+                <h3 class="ql-align-center">
+                    <span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span>
+                </h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 72 cm</span>
+                </h3>
+                <p class="ql-align-center"><br></p>
+                <p class="ql-align-center"><br></p>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">G - (TAMANHO L)</span>
+                <p class="ql-align-center"><br></p>
+                </h3><h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span>
+                </h3><h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 75 cm</span></h3>
+                <h3 class="ql-align-center"><br></h3><h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">GG - (TAMANHO XL)</span></h3>
+                <h3 class="ql-align-center"><br></h3><h3 class="ql-align-center">
+                    <span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span>
+                </h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 79 cm</span></h3>
+                <h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">XGG - (TAMANHO XXL)</span></h3>
+                <h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 85 cm</span></h3>
+                <h3 class="ql-align-center"><br></h3><h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">3XG - 91 CM ( NA CAIXA, TAMANHO 3XL )</span></h3>
+                <h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento (abaixo do busto): 27 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Comprimento nas Costas: 36 cm</span></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Tamanho da Cintura: 89 cm</span></h3>
+                
+                
+                
+                <!-- Adicione aqui as informações para outros tamanhos, se necessário -->
+                <p class="ql-align-center"><br></p>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">IMPORTANTE:</span></h3>
+                <h3 class="ql-align-center"><br></h3>
+                <h3 class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Por favor respeite a tabela orientadora de tamanhos</span></h3>
+                
+                
+                
+                
+                
+                
+                
+                <video controls width="300">
+                    <source src="{{ url_for('static', filename='ssstik.io_1694284973759.mp4') }}" type="video/mp4">
+                </video>
+                
+                <p class="ql-align-center"><br></p>
+                <p class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">Composição:</span></p>
+                <p class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">70% Tecido Emborrachado</span></p>
+                <p class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">15% Polyester</span></p>
+                <p class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">15% Nylon</span></p>
+                <p class="ql-align-center"><br></p>
+                <p class="ql-align-center">
+                    <span style="color: rgba(0, 0, 0, 0.8);">Características:</span>
+                </p>
+                <ul>
+                    <li>Não dobra, não enrola</li>
+                    <li>Não marca na roupa</li>
+                    <li>Super confortável, não machuca</li>
+                    <li>Reduz de imediato a linha da cintura</li>
+                    <li>Ajuste de tamanho</li>
+                    <li>Molda sua cintura com o uso frequente, sugestão de uso é de 4 a 8 horas por dia no máximo.</li>
+                    <li>Corrige a postura</li>
+                    <li>Acelera a recuperação pós parto</li>
+                    <li>Alivia grande parte das dores nas costas</li>
+                    <li>Fechamento por colchetes e zíper.</li>
+                </ul>
+                <p class="ql-align-center"><br></p>
+                <p class="ql-align-center"><span style="color: rgba(0, 0, 0, 0.8);">RESULTADOS:</span></p>
+                <ul>
+                    <li>Diminui medidas instantaneamente.</li>
+                    <li>Reposiciona o peso da água e gordura.</li>
+                    <li>Reduz a cintura em até 3 tamanhos instantaneamente.</li>
+                    <li>Ajuda a manter a postura correta.</li>
+                    <li>Reduz dor nas costas.</li>
+                    <li>Aumenta a atividade térmica.</li>
+                    <li>Forro de Algodão macio.</li>
+                    <li>Facilidade para regular o nível de pressão.</li>
+                </ul>
+                
+                <img src="https://s3.sa-east-1.amazonaws.com/king-assets.yampi.me/dooki/64e9d756da90c/64e9d756da911.png" alt="64e9d756da911.png" width="300">
+                <img src="https://s3.sa-east-1.amazonaws.com/king-assets.yampi.me/dooki/64e9d76408ade/64e9d76408ae2.png" alt="64e9d76408ae2.png" width="300">
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='imagens/foto3.jpg') }}" width="300" alt="Balanço de Equilíbrio">
+        <p class="price">Preço: R$ 79,90</p>
+    
+    </section>
+    <section class="contact2">
+        <div id="myModal" class="modal">
+            <div class="modal-content" style="background-color: #F34336;">
+                <span class="close">&times;</span>
+                <img src="{{ url_for('static', filename='imagens/logotipo elegancia.png') }}" width="100px" alt="Imagem 1">
+
+        
+                <h2>Escolha a Forma de Pagamento</h2>
+        
+                <!-- Botão para Pix -->
+                <button id="pixButton" style="background-color: #F34336;color: aliceblue;padding: 10px;margin: 20px;">Pagar com Pix (10% de desconto)</button>
+        
+                <!-- Botão para Boleto e Cartão -->
+                <button id="boletoCartaoButton"style="background-color: #F34336;color: aliceblue;padding: 10px;margin: 20px;"style="background-color: #F34336;color: aliceblue;padding: 10px;margin: 20px;">Pagar com Boleto ou Cartão</button>
+            </div>
+        </div>
+       
+        
+        
+        
+        
+       
+        </div>
+        
+
+        <h2>Entre em Contato</h2>
+        <p>Fale conosco!</p>
+        <p>Email: contato
+            @elegancia.com</p>
+        <p>Telefone: (51) 99990-6748</p>
+    </section>
+
+    <footer>
+        
+        <p>&copy; 2023 Elegância Versátil</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+    
+</body>
+</html>
